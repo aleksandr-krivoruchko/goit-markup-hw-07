@@ -1,0 +1,37 @@
+/*             !F o o t e r             */
+
+.footer__container {
+  display: flex;
+}
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $accent-bg-color;
+}
+
+.address__item {
+  color: #ffffff;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address__link {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.attachment {
+  padding-top: 12px;
+  margin-left: auto;
+}
+.attachment__text {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
