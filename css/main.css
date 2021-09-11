@@ -112,54 +112,46 @@ a {
 
 .logo {
   display: inline-block;
-  margin-right: 93px;
   font-family: 'Raleway', sans-serif;
   color: #000000;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
 }
-
-.logo-span {
+.logo__text {
   color: var(--accent-color);
+}
+.header__logo {
+  margin-right: 93px;
+}
+.footer__logo {
+  margin-bottom: 20px;
+  font-style: normal;
+  color: #ffffff;
 }
 
 /*                ....Навигация сайта                 */
-.main-nav {
+
+.header__main-nav {
   display: flex;
   align-items: center;
 }
 
-.main-nav .link {
-  transition-property: color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.main-nav .link:hover,
-.main-nav .link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
-
-.site-nav {
+.header__site-nav {
   display: flex;
   align-items: center;
 }
 
-.nav-list {
+.site-nav__list {
   display: flex;
 }
 
-.nav-list > .item + .item {
+.site-nav__item {
   margin-left: 50px;
-}
-
-.nav-list .item {
   position: relative;
 }
 
-.nav-list .link {
+.site-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -168,9 +160,28 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav__link--text-color {
+  display: inline-flex;
+  align-items: center;
+  color: var(--main-text-color);
+  fill: var(--main-text-color);
 }
 
-.nav-list .link::after {
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.site-nav__link.current {
+  color: var(--accent-color);
+}
+
+.site-nav__link::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -180,43 +191,25 @@ a {
   display: block;
   background: #2196f3;
   border-radius: 2px;
-
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list .link.current::after {
+.site-nav__link.current::after {
   opacity: 1;
 }
 
-.mail-tel {
+.site-nav__icon {
+  margin-right: 10px;
+}
+
+.contacts {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
-
-.mail-tel > .link {
-  display: inline-flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  font-size: 14px;
-  line-height: 1.14;
-  color: var(--main-text-color);
-  fill: var(--main-text-color);
-}
-
-.mail-tel > .link:not(:last-child) {
+.contacts__link:not(:last-child) {
   margin-right: 50px;
-}
-
-.nav-list .link.current {
-  color: var(--accent-color);
-}
-
-.icon-mail,
-.icon-tel {
-  margin-right: 10px;
 }
 
 /*           !M A I N             */
@@ -367,27 +360,28 @@ a {
 
 .team-list p {
   margin-top: 10px;
+  margin-bottom: 16px;
   color: var(--main-text-color);
   font-size: 16px;
   line-height: 1.19;
 }
+/* *             Список соц.сетей           * */
 
 .social-list {
   display: inline-flex;
   justify-content: space-between;
-  margin-top: 16px;
 }
 
-.social-item {
+.social-list__item {
   width: 44px;
   height: 44px;
 }
 
-.social-item:not(:last-child) {
+.social-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.social-link {
+.social-list__link {
   width: 100%;
   height: 100%;
   display: flex;
@@ -401,11 +395,20 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: var(--accent-color);
   fill: #ffffff;
+}
+
+.social-list__link--fill-white {
+  fill: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list__link--fill-white:hover,
+.social-list__link--fill-white:focus {
+  background-color: var(--accent-color);
 }
 
 /*...... Постоянные клиенты........ */
@@ -459,13 +462,16 @@ a {
 
 /**                  filter-list                   */
 
-.filter-list {
-  display: flex;
-  justify-content: center;
+.portfolio__filter-list {
   margin-bottom: 50px;
 }
 
-.filter-list-btn {
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-list__button {
   padding: 6px 22px;
   margin-right: 8px;
   text-align: center;
@@ -483,15 +489,15 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-list-btn:hover,
-.filter-list-btn:focus {
+.filter-list__button:hover,
+.filter-list__button:focus {
   color: var(--main-bg-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/**                  portfolio-list                    */
+/**           П О Р Т Ф О Л И О            */
 
 .portfolio-list {
   display: flex;
@@ -500,25 +506,27 @@ a {
   margin-top: calc(-1 * var(--card-set-gap));
 }
 
-.portfolio-list > .item {
+.portfolio-list__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
   cursor: pointer;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-list .item:hover,
-.portfolio-list .item:focus {
+.portfolio-list__item:hover,
+.portfolio-list__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list .item-content {
+/* *         К А Р Т О Ч К А               */
+
+.card__content {
   padding: 20px 24px 20px 24px;
   border: 1px solid #eeeeee;
 }
 
-.portfolio-list h2 {
+.card__title {
   margin-bottom: 4px;
   color: var(--title-text-color);
   font-weight: 700;
@@ -527,7 +535,7 @@ a {
   letter-spacing: 0.06em;
 }
 
-.portfolio-list p {
+.card__text {
   font-size: 16px;
   line-height: 1.87;
 }
@@ -537,7 +545,7 @@ a {
   overflow: hidden;
 }
 
-.description {
+.card__overlay {
   position: absolute;
   top: 100%;
   left: 0;
@@ -551,13 +559,13 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-list .item:hover .description,
-.portfolio-list .item:focus .description {
+.card:hover .card__overlay,
+.card:focus .card__overlay {
   opacity: 1;
   transform: translateY(-100%);
 }
 
-.description p {
+.card__description {
   padding: 63px 24px;
   font-weight: normal;
   font-size: 18px;
@@ -567,36 +575,26 @@ a {
 }
 
 /*             !F o o t e r             */
-.flexbox {
+
+.footer__container {
   display: flex;
 }
-
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--accent-bg-color);
 }
 
-.logo-footer {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-style: normal;
-  color: var(--main-bg-color);
-}
-
-.address {
+.address__item {
   color: #ffffff;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
 }
 
-.footer .link {
+.address__link {
   display: block;
   margin-top: 9px;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -604,8 +602,7 @@ a {
   padding-top: 12px;
   margin-left: auto;
 }
-
-.attachment p {
+.attachment__text {
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -615,35 +612,13 @@ a {
   color: #ffffff;
 }
 
-.attachment-list {
-  display: inline-flex;
-  width: 206px;
-  justify-content: space-between;
-  fill: #ffffff;
-}
+/**         Ф О Р М А  подписки       */
 
-.attachment-list .social-link {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  fill: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.attachment-list .social-link:hover,
-.attachment-list .social-link:focus {
-  background-color: var(--accent-color);
-}
-
-/* Ф О Р М А  в футере*/
-
-.subscription {
+.footer__subscription {
   margin-left: auto;
   padding-top: 12px;
 }
-.subscription b {
+.subscription__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.71px;
@@ -651,10 +626,10 @@ a {
   text-transform: uppercase;
   color: #ffffff;
 }
-.subscription-form {
+.subscription__form {
   margin-top: 20px;
 }
-.subscription-form input {
+.subscription__input {
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -667,12 +642,11 @@ a {
   color: #ffffff;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscription-form input:focus {
+.subscription__input:focus {
   border-color: #ffffff;
   outline: none;
 }
-
-.subscription .icon {
+.subscription__icon {
   fill: #ffffff;
   margin-left: 10px;
   vertical-align: middle;
