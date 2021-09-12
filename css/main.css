@@ -586,7 +586,7 @@ body {
 
 /* *         К А Р Т О Ч К А               */
 .card__content {
-  padding: 20px 24px 20px 24px;
+  padding: 20px 0 20px 24px;
   border: 1px solid #eeeeee;
 }
 
