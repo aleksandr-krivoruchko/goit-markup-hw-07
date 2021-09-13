@@ -11,8 +11,8 @@
 .team__list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * $card-set-gap);
-  margin-top: calc(-1 * $card-set-gap);
+  margin-left: calc(-1 * 30px);
+  margin-top: calc(-1 * 30px);
 }
 
 .business-card {
