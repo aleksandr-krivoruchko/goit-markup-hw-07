@@ -159,13 +159,6 @@ body {
   color: #2196f3;
 }
 
-.site-nav__link--text-color {
-  display: inline-flex;
-  align-items: center;
-  color: #757575;
-  fill: #757575;
-}
-
 .site-nav__link::after {
   content: "";
   position: absolute;
@@ -182,6 +175,13 @@ body {
 
 .site-nav__link.current::after {
   opacity: 1;
+}
+
+.site-nav__link--text-color {
+  display: inline-flex;
+  align-items: center;
+  color: #757575;
+  fill: #757575;
 }
 
 .site-nav__icon {
@@ -263,12 +263,12 @@ body {
   display: flex;
 }
 
-.work__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .work__item {
   position: relative;
+}
+
+.work__item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .work__label {
@@ -467,7 +467,7 @@ body {
 }
 
 /**           П О Р Т Ф О Л И О            */
-.portfolio-list {
+.card-set {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * 30px);

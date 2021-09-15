@@ -9,12 +9,12 @@
   display: flex;
 }
 
-.work__item:not(:last-child) {
-  margin-right: $card-set-gap;
-}
-
 .work__item {
   position: relative;
+
+  &:not(:last-child) {
+    margin-right: $card-set-gap;
+  }
 }
 
 .work__label {
