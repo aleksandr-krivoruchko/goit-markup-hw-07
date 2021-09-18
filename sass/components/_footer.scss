@@ -1,8 +1,7 @@
-/*             !F o o t e r             */
-
 .footer__container {
   display: flex;
 }
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -10,10 +9,8 @@
 }
 
 .address__item {
-  color: #ffffff;
+  @include text(400, 14px, 1.71, 0.03em, #ffffff);
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
 }
 
 .address__link {
@@ -26,12 +23,9 @@
   padding-top: 12px;
   margin-left: auto;
 }
+
 .attachment__text {
+  @include text(700, 14px, 1.71, 0.03em, #ffffff);
   margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
 }

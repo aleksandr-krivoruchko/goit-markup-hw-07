@@ -1,5 +1,3 @@
-/* *             Список соц.сетей           * */
-
 .social-list {
   display: inline-flex;
   justify-content: space-between;
@@ -8,25 +6,19 @@
 .social-list__item {
   width: 44px;
   height: 44px;
-
   &:not(:last-child) {
     margin-right: 10px;
   }
 }
 
 .social-list__link {
+  @include trans(box-shadow, background-color, fill);
+  @extend %flex-center;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   fill: #afb1b8;
   background-color: #ffffff;
-  transition-property: box-shadow, background-color, fill;
-  transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

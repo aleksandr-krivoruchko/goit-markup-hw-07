@@ -1,17 +1,14 @@
-/**             Чем мы занимаемся                */
-
 .work {
   padding-top: 47px;
   text-align: center;
 }
 
 .work__list {
-  display: flex;
+  @extend %flex-center;
 }
 
 .work__item {
   position: relative;
-
   &:not(:last-child) {
     margin-right: $card-set-gap;
   }
@@ -27,12 +24,7 @@
 }
 
 .work__title {
+  @include text(700, 14px, 1.14, 0.03em, #ffffff);
   padding-top: 27px;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
 }

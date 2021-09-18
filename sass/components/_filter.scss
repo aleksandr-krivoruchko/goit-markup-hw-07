@@ -1,30 +1,21 @@
-/**                  filter-list                   */
-
 .portfolio__filter-list {
   margin-bottom: 50px;
 }
 
 .filter-list {
-  display: flex;
-  justify-content: center;
+  @extend %flex-center;
 }
 
 .filter-list__button {
+  @include trans(color, background-color, box-shadow);
+  @include text(500, 16px, 1.62, 0.03em, $title-text-color);
   padding: 6px 22px;
   margin-right: 8px;
   text-align: center;
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
   background-color: $second-bg-color;
   border: hidden;
   border-radius: 4px;
   cursor: pointer;
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     color: $main-bg-color;

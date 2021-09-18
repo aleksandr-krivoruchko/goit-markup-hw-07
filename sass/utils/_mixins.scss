@@ -1,0 +1,40 @@
+@mixin text(
+  $fw: 400,
+  $fs: 14px,
+  $lh: 1.71,
+  $ls: 0.03em,
+  $color: $main-text-color
+) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $color;
+}
+
+@mixin trans($properties...) {
+  transition-property: $properties;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin input($height: 40px) {
+  @include trans(border-color);
+  @include text(400, 14px, 1.14, 0.03em, $main-text-color);
+  width: 100%;
+  height: $height;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus {
+    border-color: #2196f3;
+    outline: none;
+  }
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

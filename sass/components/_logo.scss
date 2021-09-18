@@ -1,19 +1,17 @@
-/**     .................ЛОГОТИП ................    */
-
 .logo {
+  @include text(700, 26px, 1.97, 0.03em, #000000);
   display: inline-block;
   font-family: "Raleway", sans-serif;
-  color: #000000;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
 }
+
 .logo__text {
   color: $accent-color;
 }
+
 .header__logo {
   margin-right: 93px;
 }
+
 .footer__logo {
   margin-bottom: 20px;
   font-style: normal;

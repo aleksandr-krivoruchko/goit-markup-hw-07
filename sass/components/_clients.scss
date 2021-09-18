@@ -1,5 +1,3 @@
-/**...... Постоянные клиенты........ */
-
 .clients {
   text-align: center;
 }
@@ -11,26 +9,20 @@
 .client-logo {
   width: 170px;
   height: 92px;
-
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
 
 .client-logo__link {
+  @extend %flex-center;
+  @include trans(border, fill);
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
   fill: #afb1b8;
-  transition-property: border, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   &:hover,
   &:focus {
     border: 1px solid $accent-color;
