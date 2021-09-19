@@ -1,0 +1,11 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__main-nav {
+  @extend %flex-center;
+}
+
+.header__site-nav {
+  @extend %flex-center;
+}
