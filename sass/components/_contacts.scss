@@ -1,8 +1,29 @@
 .contacts {
-  @extend %flex-center;
+  display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
-.contacts__link:not(:last-child) {
-  margin-right: 50px;
+.contacts__link {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $main-text-color;
+  fill: $main-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    fill: $accent-color;
+  }
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.contacts__icon {
+  margin-right: 10px;
 }

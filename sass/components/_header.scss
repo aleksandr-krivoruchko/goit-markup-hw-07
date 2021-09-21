@@ -3,9 +3,11 @@
 }
 
 .header__main-nav {
-  @extend %flex-center;
+  display: flex;
+  align-items: center;
 }
 
 .header__site-nav {
-  @extend %flex-center;
+  display: flex;
+  align-items: center;
 }
